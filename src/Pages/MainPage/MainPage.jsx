@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { MainPageContainer } from './MainPage.styled'
 import useApiCall from '../../Utils/useApiCall'
+import ShowResource from '../../Components/ShowResource'
 
 function MainPage() {
   const [date, setDate] = useState('')
@@ -22,7 +23,7 @@ function MainPage() {
         timezone="[[timezone]]"
         type="date"
       />
-      <img src={data?.url} />
+      <ShowResource source={data?.url} />
     </MainPageContainer>
   )
 }
