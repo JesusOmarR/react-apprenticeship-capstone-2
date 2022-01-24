@@ -5,7 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: aliceblue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+    to left bottom,
+    #01131d,
+    #091823,
+    #0e1d29,
+    #14212f,
+    #1a2635,
+    #253342,
+    #31404f,
+    #3d4e5c,
+    #556973,
+    #70848a,
+    #8da0a3,
+    #adbdbc
+  );
+  color: #9097a5;
 }
 
 code {

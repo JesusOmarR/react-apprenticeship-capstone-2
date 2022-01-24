@@ -20,6 +20,7 @@ function useApiCall(url) {
       .catch((err) => {
         setLoading(false)
         setError(err)
+        console.log(err)
       })
 
     return () => {

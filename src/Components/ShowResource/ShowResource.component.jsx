@@ -1,22 +1,24 @@
-import React, { useEffect, state, useState } from 'react'
+import { ResourceContainer } from './ShowResource.styled'
 
 function ShowResource({ source }) {
-  return source.includes('youtube') ? (
-    <div>
-      <iframe
-        className="responsive-iframe"
-        src={source}
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title="Embedded youtube"
-      />
-    </div>
+  console.log(source)
+  return source ? (
+    <ResourceContainer>
+      {source.includes('youtube') ? (
+        <iframe
+          className="responsive-source"
+          src={source}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          title="Embedded youtube"
+        />
+      ) : (
+        <img className="responsive-source" src={source} />
+      )}
+    </ResourceContainer>
   ) : (
-    <div>
-      <img src={source} />
-    </div>
+    <div></div>
   )
 }
-
 export default ShowResource
