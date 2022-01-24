@@ -23,6 +23,8 @@ export const InputDate = styled.input`
   width: 10rem;
   margin: 1rem 0 auto;
   font-weight: 600;
+  border-radius: 5px;
+  padding: 0.2rem;
 `
 export const DataCard = styled.div`
   display: flex;
@@ -53,7 +55,7 @@ export const DataCard = styled.div`
   }
 
   @media only screen and (max-width: 720px) {
-    width: 95%;
+    width: 90%;
   }
 `
 

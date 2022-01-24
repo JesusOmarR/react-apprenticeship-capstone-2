@@ -1,7 +1,6 @@
 import { ResourceContainer } from './ShowResource.styled'
 
 function ShowResource({ source }) {
-  console.log(source)
   return source ? (
     <ResourceContainer>
       {source.includes('youtube') ? (

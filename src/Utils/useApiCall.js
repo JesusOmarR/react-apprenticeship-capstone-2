@@ -4,31 +4,46 @@ function useApiCall(url) {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const [mayorError, setMayorEror] = useState(null)
 
   useEffect(() => {
     let controller = new AbortController()
     let signal = controller.signal
-    setData({})
+    setMayorEror(false)
+    setError(false)
+
     setLoading(true)
     fetch(url, { signal })
       .then((response) => response.json())
       .then((data) => {
+        if (data.code === 400) {
+          setError(data.msg)
+          setLoading(false)
+          return
+        }
+        if (data.code === 500) {
+          setMayorEror(data.msg)
+          setLoading(false)
+          return
+        }
+
         setData(data)
         setLoading(false)
-        console.log(data)
       })
       .catch((err) => {
         setLoading(false)
         setError(err)
-        console.log(err)
       })
 
     return () => {
       controller.abort()
+      setLoading(false)
+      setError(null)
+      setMayorEror(null)
     }
   }, [url])
   useDebugValue(data ? data : error)
-  return [data, error, loading]
+  return [data, error, mayorError, loading]
 }
 
 export default useApiCall
