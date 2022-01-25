@@ -31,16 +31,18 @@ function MainPage() {
         </>
       ) : (
         <>
-          <div>
+          <div className="input-container">
             <h3>Select a date</h3>
-            <InputDate
-              rol="input"
-              ref={inputEl}
-              timezone="[[timezone]]"
-              type="date"
-              aria-label="Select a date"
-            />
-            <button onClick={onChangeDate}>add</button>
+            <div>
+              <InputDate
+                rol="input"
+                ref={inputEl}
+                timezone="[[timezone]]"
+                type="date"
+                aria-label="Select a date"
+              />
+              <button onClick={onChangeDate}>Search</button>
+            </div>
           </div>
           {loading ? (
             <>...Loading</>
