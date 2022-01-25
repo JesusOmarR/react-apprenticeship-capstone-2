@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# React Intermediate Challenge 2 - Styles, Fetching API, Testing.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For this challenge, you will create an awesome React App which fetches the "Picture of the day" from the NASA open `APOD API`.
 
-## Available Scripts
+## Instructions
 
-In the project directory, you can run:
+Create an app from scratch, consider your best UX knowledge for the UI design; it is up to you. Set up eslint and prettier.
 
-### `npm start`
+**Recommendations**
+We recommend you consider the following elements that should contain the app:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Title
+- Date Picker
+- Main section with the image
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Requisites**
 
-### `npm test`
+- Don't use UI Libraries. You have to build your styles. You can use styled-components such as SASS, LESS, or CSS. You are free to use the approach that makes sense to you.
+- Fetch API Calls from the `NASA APOD` using your API KEY.
+- Publish your app using free services such as Github pages, Netflify, or Heroku.
+- Share the URL on the PR.
+- Use the React Testing Library and Jest tools to add tests.
+- Use functional components and React Hooks as possible.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Completing the Challenge
 
-### `npm run build`
+Follow these steps to complete this challenge:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Create a new branch with the name **challenge-2** from this repository.
+1. Complete all the Acceptance Criteria (AC).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Resources.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [NASA APIs](https://api.nasa.gov/)
 
-### `npm run eject`
+## Acceptance Criteria (AC) and Score
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Acceptance Criteria | Description                                                                                                                               | Points for Completed | Points for Automated |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | -------------------- |
+| 1                   | When the user enters the app, the app should show the Picture of the Day.                                                                 | 10                   | 10                   |
+| 2                   | When the user selects a specific date with the format YYYY-MM-DD, the app should show the picture of the day for the given date.          | 20                   | n/a                  |
+| 3                   | The app should be responsive.                                                                                                             | 20                   | n/a                  |
+| 4                   | When the app fetches the API, and there is an unexpected error, the app should show a message: "There was an error, please try again."    | 20                   | n/a                  |
+| 5                   | When the user selects an invalid date value and clicks on the **show** button, the app should show a message error from the API response. | 20                   | n/a                  |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Bonus
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The bonus is a plus that helps us know you better and increments your final score.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Automated Test for Second AC: `10` points.
+- Automated Test for Third AC: `10` points.
+- Automated Test for Fourth AC: `10` points.
+- Automated Test for Fifth AC: `10` points.
+- The app is responsive: `20` points.
 
-## Learn More
+#### Submitting the deliverables
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For submitting your work, you should follow these steps:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Fill [the form](https://forms.gle/7Jz2uXMFYXfcU2428) to submit your project
+2. Projects must be forked from the [baseline repo](https://github.com/wizelineacademy/react-apprenticeship-capstone-2)
+3. Please make sure that your forked repo is public
+4. Submit your deliverables as a **Pull Request (PR)** in a new branch derived from master/main on your own GitHub account
+5. Add your mentor as reviewer of your PR
+6. Remember to submit your deliverables on time to be successfully evaluated
 
-### Code Splitting
+Remember to always use your creativity!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Questions?
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any questions about this challenge, feel free to ask on the Slack channel ASAP.
