@@ -13,6 +13,7 @@ import useApiCall from '../../Utils/useApiCall'
 function MainPage() {
   const inputEl = useRef(null)
   const [date, setDate] = useState('')
+  const [showMore, setShowMore] = useState(false)
 
   const [data, error, mayorError, loading] = useApiCall(
     `https://api.nasa.gov/planetary/apod?api_key=kLQnbR8V84gxfrdCRO3hKqcaAWsUdEfcQAtxMPqq&date=${date}`
@@ -45,7 +46,12 @@ function MainPage() {
             </div>
           </div>
           {loading ? (
-            <>...Loading</>
+            <div className="loader-container">
+              <div className="lds-ripple">
+                <div></div>
+                <div></div>
+              </div>
+            </div>
           ) : (
             <>
               <DataCard>
@@ -59,7 +65,14 @@ function MainPage() {
               </DataCard>
               <InfoContainer>
                 <h2 className="about-title">About this photo:</h2>
-                <p>{data?.explanation}</p>
+                <p>
+                  {showMore
+                    ? data?.explanation
+                    : `${data?.explanation?.substring(0, 250)}`}{' '}
+                  <span onClick={() => setShowMore(!showMore)}>
+                    {showMore ? 'Show less' : 'Show more'}
+                  </span>
+                </p>
               </InfoContainer>
             </>
           )}

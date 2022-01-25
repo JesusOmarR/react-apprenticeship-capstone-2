@@ -8,6 +8,7 @@ export const ResourceContainer = styled.div`
   padding-top: 56.25%;
 
   .responsive-source {
+    transition: all 0.2s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
